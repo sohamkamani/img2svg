@@ -30,9 +30,6 @@ def slope2d(input_array):
         returned_array.append(slope[0]/ slope[1])
     return returned_array
 
-def get_relevant_contour(contours):
-    lengths = map(len, contours)
-    return contours[lengths.index(np.max(lengths))]
 
 im = cv2.imread('sample5.jpg')
 imgray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
